@@ -14,7 +14,7 @@ brew install hadoop apache-spark scala sbt
 #### Configure Envrionment
 
 ```
-vim ~/.bash_profile’).
+vim ~/.bash_profile
 ```
 
 Add the following environment variables to your bash profile 
