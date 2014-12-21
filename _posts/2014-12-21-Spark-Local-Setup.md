@@ -10,10 +10,13 @@ In this post I will explain the steps that I took in order to setup a developmen
 ```
 brew install hadoop apache-spark scala sbt
 ```
+
 #### Configure Envrionment
+
 ```
 vim ~/.bash_profile’).
 ```
+
 Add the following environment variables to your bash profile 
 
 ```
@@ -22,17 +25,20 @@ export HADOOP_HOME="/usr/local/Cellar/hadoop/2.6.0"
 export HADOOP_CONF_DIR="$HADOOP_HOME/libexec/etc/hadoop"
 export SPARK_HOME="/usr/local/Cellar/apache-spark/1.1.0"
 ```
+
 Now we need to reload the environment for our changes to take effect
 add bin folders to path variable
 
 ```
 source ~/.bash_profile
 ```
+
 Add Hadoop and Spark bin directories to the class path
 
 ```
 export PATH="$PATH":$HADOOP_HOME/bin:$SPARK_HOME/bin
 ```
+
 Configure passphraseless SSH on localhost
 
 ```
@@ -47,12 +53,14 @@ The following instructions are to configure Hadoop as a single-node in a pseudo-
 ```
 cd usr/local/Cellar/hadoop/2.6.0/libexec/
 ```
+
 Edit ‘etc/hadoop/hadoop-env.sh':
 
 ```
 # this fixes the "scdynamicstore" warning
 export HADOOP_OPTS="$HADOOP_OPTS -Djava.security.krb5.realm= -Djava.security.krb5.kdc="
 ```
+
 Add the following configuration settings:
 
 In file ‘etc/hadoop/mapred-site.xml':
@@ -87,6 +95,7 @@ In file ‘etc/hadoop/core-site.xml':
   </property>
 </configuration>
 ```
+
 In file ‘etc/hadoop/hdfs-site.xml':
 
 ```
@@ -150,6 +159,7 @@ Move to the Spark directory
 ```
 cd /usr/local/Cellar/apache-spark/1.1.0
 ```
+
 To start the spark shell using YARN 
 
 ```
@@ -192,11 +202,13 @@ object HelloWorld {
   }
 }
 ```
+
 We now need to add a build sbt file which will tell the sbt build engine what dependencies etc. to import and some basic project information.
 
 ```
 vim build.sbt
 ```
+
 Add the following code to the build.sbt file.
 
 ```
@@ -208,6 +220,7 @@ scalaVersion := "2.10.4"
 
 libraryDependencies += "org.apache.spark" %% "spark-core" % "1.1.1"
 ```
+
 Now to build and package the jar using sbt
 
 ```
@@ -215,15 +228,18 @@ mkdir -p src\main\scala
 mv HelloWorldJob.scala !$ 
 sbt clean compile package
 ```
+
 Now time to run the jar on YARN 
 
 ```
 spark-submit --class HelloWorld --master yarn-cluster target/scala-2.10/helloworld_2.10-1.0.jar
 ```
+
 Every spark context can be monitored in the browser by navigating to 
 
 ```
 http://localhost:4040/
 ```
+
 You should now see the HelloWorld job which will either have a status of executing or complete if it had already run. There are also link to the log for the job which you can also view in the browser. 
 
