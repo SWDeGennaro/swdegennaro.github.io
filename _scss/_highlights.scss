@@ -1,10 +1,4 @@
 
-.highlight { 
-  background-color: $darkerGray;
-  padding: 5px 10px;
-  margin: 20px 0;
-}
-
 .highlight pre {
   /* overflow: scroll; Prefer no word wrap? Uncomment this line and comment out the 2 lines below. */
   word-break: break-all;
@@ -14,7 +8,6 @@
 code {
   font-family: 'Courier', monospace;
   font-size: 14px;
-  color: #999
 }
 
 /*
