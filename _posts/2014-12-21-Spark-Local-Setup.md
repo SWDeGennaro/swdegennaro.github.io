@@ -1,3 +1,8 @@
+---
+layout: post
+title: Local Spark Setup
+---
+
 In this post I will explain the steps that I took in order to setup a development environment on my macbook, in order to run Spark jobs using HDFS and YARN. 
 
 #### Install Hadoop & Spark
