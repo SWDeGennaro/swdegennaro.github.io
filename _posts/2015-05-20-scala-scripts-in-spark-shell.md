@@ -16,7 +16,8 @@ Below is a simple example of what one of these Scala scripts for want of a bette
 
 ```
 //load data from HDFS parquet file
-val clickStreamDf = sqlContext.read.parquet("hdfs:///raw/2016/05/26/clickstream.parquet").repartition(100).cache()
+val clickStreamDf = 
+  sqlContext.read.parquet("hdfs:///raw/2016/05/26/clickstream.parquet").repartition(100).cache()
 
 /*
 * schema 
