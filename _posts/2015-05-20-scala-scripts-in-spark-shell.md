@@ -2,7 +2,6 @@
 layout: post
 title: Running Scala scripts in Spark shell
 ---
-# Running Scala scripts in Spark shell
 
 One of the great features of Apache Spark is the Spark Shell. It allows for interactive analysis of data from a variaty of data sources, be that HDFS, S3 or just your local file system. The spark shell allows you to quickly prototype your ETL jobs using all or a subset of your
 data without the need to build package and keep deploying your application to the cluster.
