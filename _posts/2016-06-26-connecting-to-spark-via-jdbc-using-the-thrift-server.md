@@ -41,19 +41,19 @@ In order to prove the concept I will put a small file into HDFS and then attempt
 ```
 cat logs.txt
 
-pppa006.compuserve.com	-	807256800	GET	/images/launch-logo.gif	200	1713		
-vcc7.langara.bc.ca	-	807256804	GET	/shuttle/missions/missions.html	200	8677		
-pppa006.compuserve.com	-	807256806	GET	/history/apollo/images/apollo-logo1.gif	200	1173		
-thing1.cchem.berkeley.edu	-	807256870	GET	/shuttle/missions/sts-70/sts-70-day-03-highlights.html	200	4705		
-202.236.34.35	-	807256881	GET	/whats-new.html	200	18936		
-bettong.client.uq.oz.au	-	807256884	GET	/history/skylab/skylab.html	200	1687		
-202.236.34.35	-	807256884	GET	/images/whatsnew.gif	200	651		
-202.236.34.35	-	807256885	GET	/images/KSC-logosmall.gif	200	1204		
-bettong.client.uq.oz.au	-	807256900	GET	/history/skylab/skylab.html	304	0		
-bettong.client.uq.oz.au	-	807256913	GET	/images/ksclogosmall.gif	304	0		
-bettong.client.uq.oz.au	-	807256913	GET	/history/apollo/images/apollo-logo.gif	200	3047		
-hella.stm.it	-	807256914	GET	/shuttle/missions/sts-70/images/DSC-95EC-0001.jpg	200	513911		
-mtv-pm0-ip4.halcyon.com	-	807256916	GET	/shuttle/countdown/	200	4324	
+pppa006.compuserve.com 807256800 GET /images/launch-logo.gif 200 1713		
+vcc7.langara.bc.ca 807256804	GET	/shuttle/missions/missions.html	200	8677		
+pppa006.compuserve.com 807256806	GET	/history/apollo/images/apollo-logo1.gif	200	1173		
+thing1.cchem.berkeley.edu 807256870	GET	/shuttle/missions/sts-70/sts-70-day-03-highlights.html	200	4705		
+202.236.34.35 807256881	GET	/whats-new.html	200	18936		
+bettong.client.uq.oz.au 807256884	GET	/history/skylab/skylab.html	200	1687		
+202.236.34.35 807256884	GET	/images/whatsnew.gif	200	651		
+202.236.34.35 807256885	GET	/images/KSC-logosmall.gif	200	1204		
+bettong.client.uq.oz.au 807256900	GET	/history/skylab/skylab.html	304	0		
+bettong.client.uq.oz.au 807256913	GET	/images/ksclogosmall.gif	304	0		
+bettong.client.uq.oz.au 807256913	GET	/history/apollo/images/apollo-logo.gif	200	3047		
+hella.stm.it 807256914	GET	/shuttle/missions/sts-70/images/DSC-95EC-0001.jpg	200	513911		
+mtv-pm0-ip4.halcyon.com 807256916	GET	/shuttle/countdown/	200	4324	
 ```
 
 #### put the file into hdfs
