@@ -14,7 +14,9 @@ ssh hadoop@${EMR_MASTER}
 
 #### start the thrift server
 ```
-sudo -u hadoop /usr/lib/spark/sbin/start-thriftserver.sh --master yarn-client --num-executors 5 --executor-cores 15 --executor-memory 28G --hiveconf hive.server2.thrift.port=10001
+sudo -u hadoop /usr/lib/spark/sbin/start-thriftserver.sh \
+--master yarn-client --num-executors 5 --executor-cores 15 \
+--executor-memory 28G --hiveconf hive.server2.thrift.port=10001
 ```
 
 #### test the connection on the cluster
@@ -87,7 +89,7 @@ GROUP BY url ORDER BY c DESC LIMIT 10;
 UNCACHE TABLE t1;
 ```
 
-### execute the sql file
+#### execute the sql file
 ```
 beeline -u 'jdbc:hive2://127.0.0.1:10001' -n hadoop -f test_query.sql
 ```
