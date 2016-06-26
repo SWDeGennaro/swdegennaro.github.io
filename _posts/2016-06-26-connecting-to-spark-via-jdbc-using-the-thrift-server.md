@@ -29,7 +29,7 @@ sudo -u hadoop /usr/lib/spark/sbin/start-thriftserver.sh \
 ssh -N -L 10001:localhost:10001 hadoop@${EMR_MASTER}
 ```
 
-##### connect to beeline from local machine this will be forwarded to master node
+#### connect to beeline from local machine this will be forwarded to master node
 ```
 beeline -u 'jdbc:hive2://127.0.0.1:10001' -n hadoop
 ```
